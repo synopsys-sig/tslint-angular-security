@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/synopsys-SIG/tslint-angular-security.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "TSLint",
     "Angular",
