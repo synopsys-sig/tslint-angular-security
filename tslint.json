@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "no-imports": true
+  },
+  "rulesDirectory": "./src/"
+}

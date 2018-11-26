@@ -1,0 +1,17 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/src",
+    "sourceMap": false,
+    "declaration": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ]
+  },
+  "include": [
+        "src"
+   ]
+ }

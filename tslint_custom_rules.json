@@ -1,0 +1,11 @@
+{
+  "rulesDirectory": [
+    "node_modules/tslint-angular-security"
+  ],
+
+  "rules": {
+    "flag-local-storage-angular-plugin": true,
+    "no-bypass-security": true,
+    "no-element-reference": true
+  }
+}

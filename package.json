@@ -1,0 +1,24 @@
+{
+  "name": "tslint-angular-security",
+  "description": "Angular security rules for TSLint",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslint": "^5.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  },
+  "scripts" : {
+    "build" : "tsc",
+
+    "prepare" : "npm run build",
+    "version" : "git add -A src",
+    "postversion" : "git push && git push --tags"
+  } ,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synopsys-SIG/tslint-angular-security.git"
+  },
+  "keywords": ["TSLint", "Angular", "Security", "TypeScript"],
+  "author": "Ksenia Peguero"
+}
