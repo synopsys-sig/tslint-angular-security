@@ -21,6 +21,8 @@
   "publishConfig": {
     "access": "public"
   },
+  "main": "index.js",
+  "license": "MIT",
   "keywords": [
     "TSLint",
     "Angular",
