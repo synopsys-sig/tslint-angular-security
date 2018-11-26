@@ -8,17 +8,21 @@
   "devDependencies": {
     "typescript": "^2.9.2"
   },
-  "scripts" : {
-    "build" : "tsc",
-
-    "prepare" : "npm run build",
-    "version" : "git add -A src",
-    "postversion" : "git push && git push --tags"
-  } ,
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/synopsys-SIG/tslint-angular-security.git"
   },
-  "keywords": ["TSLint", "Angular", "Security", "TypeScript"],
+  "keywords": [
+    "TSLint",
+    "Angular",
+    "Security",
+    "TypeScript"
+  ],
   "author": "Ksenia Peguero"
 }

@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/src",
+    "outDir": "./rules",
     "sourceMap": false,
     "declaration": true,
     "target": "es5",
