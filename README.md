@@ -4,45 +4,46 @@ These simple linting rules flag points of interest where a security problem may 
 
 ## Getting Started
 
-Use the compiled rules from `\dist\src` with your installation of TSLint. In the project that you plan to scan (target project), go to the `node_modules` folder and create a folder called `tslint-angular-security`.
-```
-git clone -q https://github.com/Synopsys-SIG/tslint-angular-security
-cd targetproject\node_modules && mkdir tslint-angular-security
-```
+TSLint must be installed locally in the target project. And the project must have tsconfig.json file in the root folder. Install `tslint-angular-security` from npm.
 
-Copy files from `\dist\src` in this project to the `node_modules\tslint-angular-security` folder in the target project.
-```
-cp tslint-angular-security\dist\src\* targetproject\node_modules\tslint-angular-security
-```
-
-## Configuration
-
-Copy the `tslint_custom_rules.json` configuration file from the root of this project to the root of the target project.
-```
-cp tslint-angular-security\tslint_custom_rules.json targetproject\
-```
-
-Alternatively, modify the `tslint.json` file in the project to include the rules you need from the tslint-angular-security package.
-
-## Prerequisites
-
-TSLint must be installed locally in the target project. And the project must have tsconfig.json file in the root folder.
 ```
 cd targetproject
 npm init -y
 npm i tslint typescript
-npm i tslint-microsoft-contrib
+npm i tslint-angular-security
 ./node_modules/tslint/bin/tslint --init
 ```
+
+## Configuration
+
+Configure the target project `tslint.json` file to include the needed rules from the `tslint-angular-security` package. 
+
+```
+{
+  "rulesDirectory": [
+    "node_modules/tslint-angular-security"
+  ],
+
+  "rules": {
+    "flag-local-storage-angular-plugin": true,
+    "no-bypass-security": true,
+    "no-element-reference": true
+  }
+}
+```
+
+See example configuration in `tslint_custom_rules.json`.
+
 
 ## Running
 
 In the root of the target project run:
 
 ```
-./node_modules/.bin/tslint --project tsconfig.json --config tslint_custom_rules.json
+./node_modules/.bin/tslint --project tsconfig.json --config tslint.json
 ```
-*Warning: this repository is a work-in-progress. Things may break while we transition this project to open source. This is not an officially supported Synopsys product.*
+
+*Warning: This repository is a work-in-progress. Things may break while we transition this project to open source. This is not an officially supported Synopsys product.*
 
 ## Rules
 
@@ -54,12 +55,12 @@ Rule Name   | Description | Vulnerability | CWE
 
 ## Developing
 
-Feel free to update/add new rules in your local version. After you update the .ts files in `src`, compile them using the [TypeScript compiler](https://www.npmjs.com/package/typescript) from the root folder:
+Feel free to update/add new rules in your local version. After you add/update the .ts, compile them using the [TypeScript compiler](https://www.npmjs.com/package/typescript) from the root folder:
 
 ```
 tsc
 ```
-The compiled JavaScript files will be in `dist\src`. Copy them to `node_modules\tslint-angular-security` in the target project and use them there. 
+The compiled JavaScript files will be in the root directory. Copy them to `node_modules\tslint-angular-security` in the target project and use them. 
 
 ## Authors
  
