@@ -1,9 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./rules",
     "sourceMap": false,
-    "declaration": true,
     "target": "es5",
     "skipLibCheck": true,
     "lib": [
@@ -12,6 +10,6 @@
     ]
   },
   "include": [
-        "src"
+        "."
    ]
  }
