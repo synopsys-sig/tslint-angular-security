@@ -2,7 +2,7 @@
 
 # compiled output
 # for this project we do not need the compiled version of the rules
-.js
+*.js
 
 # dependencies
 /node_modules
